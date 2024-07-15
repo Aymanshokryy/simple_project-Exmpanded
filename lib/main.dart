@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-     checkerboardRasterCacheImages:true ,    
+      debugShowCheckedModeBanner: false,
       home: FacebookApp(),
     );
   }
@@ -59,72 +59,108 @@ class FacebookApp extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 20,
         ),
-        body:
-
-          
-         Container(
-        
-          height: 400,
-          width: double.infinity,
-          alignment: Alignment.center,
-
-          decoration: BoxDecoration(
-            color: Colors.blueGrey,
-            
-          ),
-
-          child: Column(
-            children: [
-              Container(
-                alignment: Alignment.center,
-                child: Text(
-                  "Ayman",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-                height: 100,
-                width:150,
-                decoration: BoxDecoration(
-                  color: Colors.yellow,
-                ),
-              ),
-
-               Expanded(
-                flex: 2,
-                child:  Container(
-                alignment: Alignment.center,
-                child: Text(
-                  "Ayman",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-                height: 100,
-                width: 150,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 115, 156, 222),
-                ),
-              ),
-                 ),
-              
-              Expanded(
-                flex: 3,
-                child: Container(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Ayman",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+        body: Center(
+          child: Container(
+            padding: EdgeInsets.all(10),
+            height: 300,
+            width: 300,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.blueGrey,
+            ),
+            child: Stack(
+              children: [
+                Positioned(
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Ayman Shokry",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    height: 100,
+                    width: 100,
+                    color: Colors.green[300],
                   ),
-                  height: 100,
-                  width:150,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 179, 114, 159),
-                  ),
-
+                  left: 0,
                 ),
-              ),
-              
-            ],
-          
+                Positioned(
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Ayman Shokry",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    height: 100,
+                    width: 100,
+                    color: Color.fromARGB(255, 252, 238, 114),
+                  ),
+                  right: 0,
+                ),
+                Positioned(
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Ayman Shokry",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    height: 100,
+                    width: 100,
+                    color: Colors.pink[200],
+                  ),
+                  bottom: 0,
+                  left: 0,
+                ),
+
+
+                
+                Positioned(
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Ayman Shokry",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    height: 100,
+                    width: 100,
+                    color: Colors.blue[400],
+                  ),
+                  bottom: 0,
+                  right: 0,
+                ),
+
+
+                Center(
+                  child: Positioned(
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Ayman Shokry",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      height: 130,
+                      width: 130,
+                      color: Colors.red[300],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-          padding: EdgeInsets.all(30),
         ));
   }
 }
